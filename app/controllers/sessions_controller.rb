@@ -3,11 +3,11 @@ class SessionsController <  ApplicationController
   end
 
   def create
-    sessions[:name] = params[:name]
+    session[:name] = params[:name]
     redirect_to '/'
   end
 
   def destroy
-    sessions.destroy :name
+    session.destroy :name
   end
 end
